@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `scandiweb`
+-- Database: `nx6traoz8zq8wz64`
 --
 
 -- --------------------------------------------------------
@@ -44,7 +44,7 @@ CREATE TABLE `products` (
 --
 
 --
--- Indexes for table `products`
+-- Indexes for table `products`productsproducts
 --
 ALTER TABLE `products`
   ADD PRIMARY KEY (`id`),

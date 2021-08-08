@@ -2,19 +2,19 @@
 
 ob_start();
 
-Route::get('index.php', function () {
+Route::get('/', function () {
     ProductController::index();
 });
 
-Route::get('add-product', function () {
+Route::get('/add-product', function () {
     ProductController::create();
 });
 
-Route::post('store-product', function () {
+Route::post('/store-product', function () {
     ProductController::add();
 });
 
-Route::post('mass-delete', function () {
+Route::post('/mass-delete', function () {
     ProductController::delete();
 });
 

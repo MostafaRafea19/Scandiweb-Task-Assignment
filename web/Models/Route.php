@@ -8,7 +8,7 @@ class Route
     public static function get($route, $action)
     {
         self::$getRoutes[] = $route;
-        if ($_GET['url'] == $route) {
+        if ($_SERVER['REQUEST_URI'] == $route) {
             $action->__invoke();
         }
     }
@@ -16,7 +16,7 @@ class Route
     public static function post($route, $action)
     {
         self::$postRoutes[] = $route;
-        if ($_GET['url'] == $route) {
+        if ($_SERVER['REQUEST_URI'] == $route) {
             $action->__invoke();
         }
     }

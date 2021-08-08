@@ -10,7 +10,7 @@
             </div>
         <?php } ?>
         <?php if ($_SERVER['REQUEST_URI'] == '/add-product') { ?>
-            <a class="navbar-brand" href="/add-product">Product Add</a>
+            <a class="navbar-brand" href="/add-product">Add Product</a>
             <div class="navbar-collapse text-right justify-content-end" id="navbarSupportedContent">
                 <button class="btn btn-success my-2 my-sm-0 mx-lg-1" id="save">Save</button>
                 <a href="/" class="btn btn-light my-2 my-sm-0 mx-1">Cancel</a>

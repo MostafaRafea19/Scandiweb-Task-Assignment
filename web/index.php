@@ -1,6 +1,6 @@
 <?php
 
-
+require(__DIR__ . '/../vendor/autoload.php');
 
 spl_autoload_register(function ($class_name) {
     if (file_exists("Models/$class_name.php")) {

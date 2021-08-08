@@ -33,7 +33,7 @@
             })
                 .done(function (data) {
                     // console.log(data);
-                    window.location.href = "http://<?= $_SERVER['SERVER_NAME'] ?>";
+                    window.location.href = "<?= (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . '://' . $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT']; ?>";
                 })
                 .fail(function (jqXHR, textStatus, errorThrown) {
                     $('.list-group').remove();

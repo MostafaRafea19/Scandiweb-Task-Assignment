@@ -5,14 +5,14 @@ class ProductController
     public static function index()
     {
         $products = Product::all();
-        $component = 'Views/components/product-list.php';
-        require_once('Views/layouts/app.php');
+        $component = '/../components/product-list.php';
+        require_once(__DIR__ . '/../Views/layouts/app.php');
     }
 
     public static function create()
     {
-        $component = 'Views/components/add-product.php';
-        require_once('Views/layouts/app.php');
+        $component = '/../components/add-product.php';
+        require_once(__DIR__ . '/../Views/layouts/app.php');
     }
 
     public static function add()
@@ -62,6 +62,7 @@ class ProductController
         if (count(AddProductRequest::getErrors()) == 0) {
             $product = new Product($data);
             $product->add();
+            header('location: ' . (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . '://' . $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT']);
         } else {
             $errors = AddProductRequest::getErrors();
             $e = json_encode($errors);
@@ -74,7 +75,7 @@ class ProductController
         foreach ($_POST['products'] as $product) {
             $id = substr($product, 7, strlen($product) - 7);
             Product::delete(intval($id));
-            header('location: http://' . $_SERVER['SERVER_NAME']);
+            header('location: ' . (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . '://' . $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT']);
         }
     }
 }
