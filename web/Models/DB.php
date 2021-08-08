@@ -4,7 +4,7 @@ class DB
 {
     public static function connect(): PDO
     {
-        $connection = new PDO("mysql:host=c8u4r7fp8i8qaniw.chr7pe7iynqr.eu-west-1.rds.amazonaws.com;dbname=nx6traoz8zq8wz64", "zzq7loavdinefjmx", "uo40426q9xlvuh49");
+        $connection = new PDO("mysql:host=ro2padgkirvcf55m.cbetxkdyhwsb.us-east-1.rds.amazonaws.com;dbname=mp33mt50suwgvch2", "le4pqm7wwoqbo3rl", "m6yy7wq8d7fkvapa");
         $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         return $connection;
     }
